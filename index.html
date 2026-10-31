@@ -610,3 +610,681 @@ function verifierAssociation() {
 initialiserAssociation();
 
 </script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comprendre une vidéo sur les vacances</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f6f6f6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 14px 40px;
+}
+
+.titre-activite {
+    background: linear-gradient(135deg,#ff5b63 0%,#ff4a55 100%);
+    color: white;
+    padding: 20px 24px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.carte {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    margin-bottom: 18px;
+}
+
+.sous-titre {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d84049;
+    margin-bottom: 12px;
+}
+
+
+/* ==================================================
+   VIDÉO
+================================================== */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #000000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    margin-bottom: 18px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ==================================================
+   PREMIER VISIONNAGE
+================================================== */
+
+.elements-premier-visionnage {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 14px;
+}
+
+.element-visionnage {
+    background: #fff2f3;
+    border-left: 5px solid #ff5257;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+
+/* ==================================================
+   QUESTIONS
+================================================== */
+
+.question-video {
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+    transition: background .2s;
+}
+
+.question-video:last-of-type {
+    border-bottom: none;
+}
+
+.question-video label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.question-video input {
+    margin-right: 7px;
+}
+
+
+/* ==================================================
+   BOUTONS
+================================================== */
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.btn-principal {
+    background: #ff5257;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(255,82,87,0.30);
+}
+
+.btn-principal:hover {
+    background: #ef454c;
+}
+
+.btn-secondaire {
+    background: white;
+    color: #444444;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 13px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-secondaire:hover {
+    background: #f7f7f7;
+}
+
+.resultat {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 18px;
+    background: #fff2f3;
+    border-left: 5px solid #ff5257;
+    border-radius: 10px;
+}
+
+
+/* ==================================================
+   DISCUSSION
+================================================== */
+
+.discussion-question {
+    padding: 16px 18px;
+    background: #fff2f3;
+    border-left: 5px solid #ff5257;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 760px) {
+
+    .elements-premier-visionnage {
+        grid-template-columns: 1fr;
+    }
+
+    .titre-activite {
+        font-size: 21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- TITRE -->
+
+    <div class="titre-activite">
+        Activité 2. Comprendre une vidéo sur les vacances
+    </div>
+
+
+    <!-- VIDÉO -->
+
+    <div class="video-container">
+
+        <iframe
+            src="https://www.youtube.com/embed/DdTVHDGBPBA"
+            title="Les vacances"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="carte">
+
+        <p style="margin:0;">
+            Regardez la vidéo deux fois.
+        </p>
+
+    </div>
+
+
+    <!-- PREMIER VISIONNAGE -->
+
+    <div class="carte">
+
+        <div class="sous-titre">
+            Premier visionnage
+        </div>
+
+        <p style="margin:0 0 18px 0;">
+            Regardez la vidéo pour comprendre les idées générales.
+            À la fin, échangez avec l’enseignant sur ce que vous avez compris.
+            Concentrez-vous sur les trois éléments suivants :
+        </p>
+
+        <div class="elements-premier-visionnage">
+
+            <div class="element-visionnage">
+                <strong>1. Qui parle ?</strong>
+            </div>
+
+            <div class="element-visionnage">
+                <strong>2. Où sont-ils allés ?</strong>
+            </div>
+
+            <div class="element-visionnage">
+                <strong>3. Quel type de vacances ont-ils passé ?</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DEUXIÈME VISIONNAGE -->
+
+    <div class="carte">
+
+        <div class="sous-titre">
+            Deuxième visionnage
+        </div>
+
+        <p style="margin:0 0 20px 0;">
+            Regardez la vidéo une deuxième fois et répondez aux huit questions.
+        </p>
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question-video" data-reponse="b">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                1. Avec qui Souleymane est-il parti en Corse ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q1" value="a">
+                Avec ses parents
+            </label>
+
+            <label>
+                <input type="radio" name="video-q1" value="b">
+                Avec ses cousins
+            </label>
+
+            <label>
+                <input type="radio" name="video-q1" value="c">
+                Avec ses amis
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question-video" data-reponse="a">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                2. Quelles activités Souleymane a-t-il faites en Corse ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q2" value="a">
+                De la randonnée, de la voile et de la plongée sous-marine
+            </label>
+
+            <label>
+                <input type="radio" name="video-q2" value="b">
+                Du vélo, du camping et du shopping
+            </label>
+
+            <label>
+                <input type="radio" name="video-q2" value="c">
+                Du ski, du tennis et de la natation
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question-video" data-reponse="c">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                3. Quel temps a-t-il fait pendant son séjour en Corse ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q3" value="a">
+                Il a beaucoup plu.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q3" value="b">
+                Il a fait froid.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q3" value="c">
+                Il a fait un temps magnifique.
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question-video" data-reponse="a">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                4. Comment Souleymane et sa famille se sont-ils déplacés en Allemagne ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q4" value="a">
+                Ils ont loué une voiture.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q4" value="b">
+                Ils ont pris le train.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q4" value="c">
+                Ils ont voyagé à vélo.
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question-video" data-reponse="b">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                5. Pourquoi Souleymane a-t-il préféré Berlin ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q5" value="a">
+                Parce que la ville est calme et petite.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q5" value="b">
+                Parce que la ville est culturelle, dynamique et animée.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q5" value="c">
+                Parce qu’il y a beaucoup de plages.
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+
+        <div class="question-video" data-reponse="b">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                6. Qu’a fait Julien pendant sa première semaine à Paris ?
+            </div>
+
+            <label>
+                <input type="radio" name="video-q6" value="a">
+                Il a visité des musées.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q6" value="b">
+                Il a fait du shopping.
+            </label>
+
+            <label>
+                <input type="radio" name="video-q6" value="c">
+                Il est allé à Disneyland.
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 7 -->
+
+        <div class="question-video" data-reponse="vrai">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                7. Julien a fait un voyage itinérant à vélo en Bretagne.
+            </div>
+
+            <label>
+                <input type="radio" name="video-q7" value="vrai">
+                Vrai
+            </label>
+
+            <label>
+                <input type="radio" name="video-q7" value="faux">
+                Faux
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 8 -->
+
+        <div class="question-video" data-reponse="faux">
+
+            <div style="font-weight:700; margin-bottom:10px;">
+                8. Souleymane et Julien ont rendez-vous à 16 h devant la boulangerie.
+            </div>
+
+            <label>
+                <input type="radio" name="video-q8" value="vrai">
+                Vrai
+            </label>
+
+            <label>
+                <input type="radio" name="video-q8" value="faux">
+                Faux
+            </label>
+
+        </div>
+
+
+        <!-- BOUTONS -->
+
+        <div class="actions">
+
+            <button
+                class="btn-principal"
+                onclick="verifierVideo()">
+                Vérifier
+            </button>
+
+            <button
+                class="btn-secondaire"
+                onclick="recommencerVideo()">
+                Recommencer
+            </button>
+
+        </div>
+
+
+        <div id="resultat-video" class="resultat"></div>
+
+    </div>
+
+
+    <!-- DISCUSSION -->
+
+    <div class="carte">
+
+        <div class="sous-titre">
+            Après les deux visionnages
+        </div>
+
+        <p style="margin:0 0 15px 0;">
+            Discutez en binôme.
+        </p>
+
+        <div class="discussion-question">
+
+            <strong>1.</strong>
+            As-tu déjà visité Paris ou Berlin ?
+            Qu’est-ce que tu as visité ou fait dans cette ville ?
+
+        </div>
+
+        <div class="discussion-question" style="margin-bottom:0;">
+
+            <strong>2.</strong>
+            Tu préfères faire un voyage à vélo comme Julien
+            ou visiter plusieurs grandes villes comme Souleymane ?
+            Pourquoi ?
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function verifierVideo() {
+
+    const questions =
+        document.querySelectorAll(".question-video");
+
+    let score = 0;
+    let questionsRepondues = 0;
+
+
+    questions.forEach(function(question) {
+
+        const bonneReponse =
+            question.dataset.reponse;
+
+        const selection =
+            question.querySelector(
+                'input[type="radio"]:checked'
+            );
+
+
+        question.style.background = "transparent";
+        question.style.borderRadius = "10px";
+        question.style.paddingLeft = "0";
+        question.style.paddingRight = "0";
+
+
+        if (selection) {
+
+            questionsRepondues++;
+
+            if (selection.value === bonneReponse) {
+
+                score++;
+
+                question.style.background =
+                    "#eef9f0";
+
+            } else {
+
+                question.style.background =
+                    "#fff0f0";
+
+            }
+
+            question.style.paddingLeft = "12px";
+            question.style.paddingRight = "12px";
+        }
+
+    });
+
+
+    const resultat =
+        document.getElementById("resultat-video");
+
+    resultat.style.display = "block";
+
+
+    if (questionsRepondues < 8) {
+
+        resultat.innerHTML =
+            "<strong>" +
+            score +
+            " / 8</strong> réponses correctes. " +
+            "Certaines questions n’ont pas encore de réponse.";
+
+    }
+
+    else if (score === 8) {
+
+        resultat.innerHTML =
+            "<strong>Bravo ! 8 / 8.</strong> " +
+            "Toutes les réponses sont correctes.";
+
+    }
+
+    else {
+
+        resultat.innerHTML =
+            "<strong>" +
+            score +
+            " / 8</strong> réponses correctes. " +
+            "Les questions en vert sont correctes. " +
+            "Revoyez les questions en rouge puis essayez de nouveau.";
+
+    }
+
+}
+
+
+function recommencerVideo() {
+
+    document
+        .querySelectorAll(
+            '.question-video input[type="radio"]'
+        )
+        .forEach(function(input) {
+
+            input.checked = false;
+
+        });
+
+
+    document
+        .querySelectorAll(".question-video")
+        .forEach(function(question) {
+
+            question.style.background =
+                "transparent";
+
+            question.style.paddingLeft =
+                "0";
+
+            question.style.paddingRight =
+                "0";
+
+        });
+
+
+    const resultat =
+        document.getElementById("resultat-video");
+
+    resultat.style.display = "none";
+    resultat.innerHTML = "";
+
+}
+
+</script>
+
+</body>
+</html>
